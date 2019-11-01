@@ -29,7 +29,7 @@ for device in devices:
     print (datetime.datetime.now())
     g.write(f'---------------- Connecting to {device} ------------------\n')
     g.write (str(datetime.datetime.now())+"\n")
-    asa = netmiko.ConnectHandler(host=device, username=user, password=pw, device_type="cisco_asa", secret="admin12#$")
+    asa = netmiko.ConnectHandler(host=device, username=user, password=pw, device_type="cisco_asa")
     for command in commands:
         print (f'-------- Sending Command {command} ----------')
         g.write(f'-------- Sending Command {command} ----------\n')
